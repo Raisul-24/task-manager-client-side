@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../Components/Navbar/Navbar";
 import { useTheme } from "../Components/Theme/ThemeContext";
 import { styled } from "styled-components";
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 
 const ManiLayoutContainer = styled.div`
@@ -15,8 +16,10 @@ const MainLayOut = () => {
       <ManiLayoutContainer theme={theme}>
          <div className="max-w-screen-2xl mx-auto">
          <Navbar></Navbar>
-         <Outlet></Outlet>
+         
+            <Outlet></Outlet>
          </div>
+         <Footer></Footer>
       </ManiLayoutContainer>
    );
 };
