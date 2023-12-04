@@ -10,7 +10,7 @@ const ThemeToggleButton = () => {
    const { theme, toggleTheme } = useTheme();
 
    return (
-      <ToggleButton onClick={toggleTheme}>
+      <ToggleButton onClick={toggleTheme} >
          {
             theme === 'light' ? (
                <>

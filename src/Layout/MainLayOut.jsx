@@ -13,7 +13,7 @@ const MainLayOut = () => {
    const { theme } = useTheme();
    return (
       <ManiLayoutContainer theme={theme}>
-         <div className="max-w-screen-xl mx-auto">
+         <div className="max-w-screen-2xl mx-auto">
          <Navbar></Navbar>
          <Outlet></Outlet>
          </div>
