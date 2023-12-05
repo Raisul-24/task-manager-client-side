@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.5",
+    "aos": "^3.0.0-beta.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.2",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.20.1",
     "react-scroll": "^1.9.0",

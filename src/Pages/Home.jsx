@@ -1,6 +1,8 @@
 import About from "../Components/About";
 import Banner from "../Components/Banner";
 import Contact from "../Components/Contact";
+import Experience from "../Components/Experience";
+import Projects from "../Components/Projects";
 import Skills from "../Components/Skills";
 
 
@@ -12,6 +14,12 @@ const Home = () => {
          </section>
          <section id="about">
             <About></About>
+         </section>
+         <section id="experience">
+            <Experience></Experience>
+         </section>
+         <section id="projects">
+            <Projects></Projects>
          </section>
          <section id="skills">
             <Skills></Skills>
