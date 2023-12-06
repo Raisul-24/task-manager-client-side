@@ -31,7 +31,7 @@ const Banner = () => {
                   <a href="https://drive.google.com/file/d/1vyZr2Nhwzdq0kwNWZG0djV8GItLmO2TE/view?usp=sharing">See My CV</a></button>
             </div>
          </div>
-         <div className="w-full md:w-1/2 bg-[url('images/header_bg.png')] bg-no-repeat flex justify-end">
+         <div className="w-full md:w-1/2 bg-[url('/images/header_bg.png')] bg-no-repeat flex justify-end">
             <img src="images/ss.png" alt="" className="w-96"></img>
          </div>
 
