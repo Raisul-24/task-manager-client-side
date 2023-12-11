@@ -1,6 +1,13 @@
 import { TypeAnimation } from 'react-type-animation';
 
 const Banner = () => {
+   const handleDownload = () => {
+      const downloadLink = document.createElement('a');
+      downloadLink.href = 'https://drive.google.com/uc?export=download&id=1c0FQJ1on1FanX7JVXwtulPH5Hzvvv4XW';
+      downloadLink.download = 'Raisul_Resume.pdf';
+      downloadLink.target = '_blank'; // Open in a new tab (optional)
+      downloadLink.click();
+   };
    return (
       <div className="flex flex-col md:flex-row justify-between items-center p-4 md:p-0 ">
          <div className="w-full md:w-1/2 md:pl-10">
@@ -27,8 +34,9 @@ const Banner = () => {
                className='text-xl md:text-5xl font-extrabold text-amber-700'
             />
             <div>
-               <button className="btn btn-sm btn-outline btn-info mt-9">
-                  <a href="https://drive.google.com/file/d/1vyZr2Nhwzdq0kwNWZG0djV8GItLmO2TE/view?usp=sharing">See My CV</a></button>
+               <button className="btn btn-sm btn-outline btn-info mt-9" onClick={handleDownload}>
+                  Download My Resume
+               </button>
             </div>
          </div>
          <div className="w-full md:w-1/2 bg-[url('/images/header_bg.png')] bg-no-repeat flex justify-end">

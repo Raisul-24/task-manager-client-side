@@ -18,8 +18,10 @@ const MainLayOut = () => {
          <Navbar></Navbar>
          
             <Outlet></Outlet>
+            
          </div>
          <Footer></Footer>
+
       </ManiLayoutContainer>
    );
 };

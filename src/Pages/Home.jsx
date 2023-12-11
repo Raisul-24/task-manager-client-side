@@ -27,8 +27,6 @@ const Home = () => {
          <section id="contact">
             <Contact></Contact>
          </section>
-
-
       </div>
    );
 };

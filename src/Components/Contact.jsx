@@ -1,9 +1,39 @@
-// import React from 'react';
+
 import { FaEnvelope, FaFacebook, FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
+
+   const serviceId = "service_r4qjc96";
+const templateId = "template_fbmx0x5";
+const publicKey = "pkPe6ZGuZcAYvWIYt";
+
+   const handleSubmit = async (e) => {
+      e.preventDefault();
+    
+      try {
+        const { name, email, message } = e.target.elements;
+    
+        await emailjs.sendForm(serviceId, templateId, e.target, publicKey, {
+          name: name.value,
+          email: email.value,
+          message: message.value,
+        });
+        toast.success('Your message has been sent successfully!!');
+        // Reset the form data
+        e.target.reset();
+        
+      } catch (error) {
+        console.error(error);
+        toast.error("An error occurred while sending your message. Please try again later.");
+      }
+    };
+    
+
+    
    return (
       <div className="hero min-h-[500px] rounded-xl mb-16 md:mb-2 ">
          <div className="hero-content flex flex-col md:flex-row-reverse md:justify-center w-full">
@@ -25,7 +55,7 @@ const Contact = () => {
                   wrapper="span"
                   speed={50}
                   repeat={Infinity}
-                  className='text-lg md:text-3xl font-extrabold text-lime-400'
+                  className='text-sm md:text-3xl font-extrabold text-lime-400'
                />
                <h2 className="font-semibold mt-4">Contact Information</h2>
                <div className="font-normal">
@@ -34,7 +64,7 @@ const Contact = () => {
                   <h2 className="flex"> <span className="font-medium "> <div className="flex gap-x-1 items-center"><FaGithub /> Github: </div> </span> <a href="https://github.com/Raisul-24">Raisul-24</a> </h2>
                </div>
                <h2 className="font-semibold mt-4 mb-2">Social Links:</h2>
-               <div className="text-3xl flex gap-x-3">
+               <div className="text-3xl flex justify-center md:justify-start gap-x-3">
                   <p className="text-white bg-black rounded-full"><a href="https://github.com/Raisul-24"><FaGithub /></a></p>
                   <p className="text-sky-600 bg-white rounded-full"><a href="https://www.linkedin.com/in/raisul~islam"><FaLinkedin /></a></p>
                   <p className="rounded-full"><a href="https://twitter.com/raisul_24"><FaXTwitter /></a></p>
@@ -44,8 +74,7 @@ const Contact = () => {
             </div>
             <div className="w-full md:w-1/2 m-0 p-0">
             <div className="card shrink-0 max-w-sm shadow-2xl bg-lime-100">
-               <form
-                  // onSubmit={handleSubmit(onSubmit)} 
+               <form onSubmit={handleSubmit} 
                   className="card-body">
                   <div className="form-control">
                      <label className="label">
@@ -53,24 +82,24 @@ const Contact = () => {
                      </label>
                      <input type="text"
                         placeholder="Enter your name...."
-                        // {...register("name", { required: true })}
-                        className="input input-bordered bg-white" />
+                        name="name"
+                        className="input input-bordered bg-white" required/>
                   </div>
                   <div className="form-control">
                      <label className="label">
                         <span className="label-text">Email</span>
                      </label>
                      <input type="email"
-                        // {...register("email", {required: true})}
-                        placeholder="Enter your email...." className="input input-bordered bg-white" />
+                        name="email"
+                        placeholder="Enter your email...." className="input input-bordered bg-white" required/>
                   </div>
                   <div className="form-control">
                      <label className="label">
                         <span className="label-text">Message</span>
                      </label>
                      <textarea
-                        // {...register("email", {required: true})}
-                        placeholder="Enter your message...." className="textarea-lg textarea-bordered rounded-lg bg-white pt-1" />
+                        name="message"
+                        placeholder="Enter your message...." className="textarea-lg textarea-bordered rounded-lg bg-white pt-1" required/>
                   </div>
 
                   <div className="form-control mt-6">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import bootstrap from '/images/icon/bootstrap.jpeg';
 import tailwind from '/images/icon/tailwind.png';
 import daisyui from '/images/icon/daisyui.png';
@@ -17,13 +17,6 @@ import php from '/images/icon/php.png';
 import python from '/images/icon/python.jpeg';
 
 const Skills = () => {
-   const [skills, setSkills] = useState([]);
-   fetch('skill.json')
-      .then(res => res.json())
-      .then(data => {
-         setSkills(data);
-      })
-   console.log(skills)
    return (
       <div className="my-24 container mx-auto">
          <h2 className="text-5xl text-center font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">My Skills</h2>

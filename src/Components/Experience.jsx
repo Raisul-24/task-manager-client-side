@@ -10,7 +10,7 @@ const Experience = () => {
       AOS.refresh();
    }, [])
    return (
-      <div>
+      <div >
          <h3 className="text-5xl text-center font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">My Experience</h3>
          <div className="container mx-auto  text-center">
             <div className="my-3" data-aos="zoom-in-up" data-aos-duration='1000'>
