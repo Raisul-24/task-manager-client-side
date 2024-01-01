@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import SmartFitnessTracker from "./Projects/smartFitnessTracker/SmartFitnessTracker";
 import SkillFusionHub from "./Projects/SkillFusionHub/SkillFusionHub";
 import FutureTechHaven from "./Projects/FutureTechHaven/FutureTechHaven";
+import ToDoTaskManagement from "./Projects/ToDoTaskManagement/ToDoTaskManagement";
 
 const Projects = () => {
    useEffect(() => {
@@ -15,6 +16,9 @@ const Projects = () => {
       <div className="container mx-auto my-10">
          <h3 className="text-5xl text-center font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">My Projects</h3>
          <div className="" data-aos="zoom-in-up" data-aos-duration='1000'>
+            <ToDoTaskManagement></ToDoTaskManagement>
+         </div>
+         <div className="mt-10" data-aos="zoom-in-up" data-aos-duration='1000'>
             <SmartFitnessTracker></SmartFitnessTracker>
          </div>
          <div className="my-10" data-aos="zoom-in-up" data-aos-duration='1000'>
